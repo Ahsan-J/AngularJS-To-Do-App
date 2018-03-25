@@ -13,7 +13,8 @@ module.exports = function(grunt){
             css:{
                 src:[
                     './node_modules/bootstrap/dist/css/bootstrap.css',
-                    './modules/**/*.css'
+                    './mode_modules/@fontawesome/fontawesome/style.css',
+                    './modules/**/*.css',
                 ],
                 dest:'../public/assets/css/bundle.css'
             },
@@ -27,6 +28,7 @@ module.exports = function(grunt){
                     // './assets/js/bootstrap.js',
                     // './node_modules/popper.js/dist/popper.js',
                     './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+                    './mode_modules/@fontawesome/fontawesome/index.js',
                 ],
                 dest:'../public/assets/js/depending.js'
             },

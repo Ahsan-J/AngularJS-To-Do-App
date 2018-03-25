@@ -47,7 +47,19 @@ app.config(['$stateProvider','$locationProvider',function($stateProvider,$locati
     })
 
   }]);
-
+app.directive('about',[function(){
+    return {
+        restrict:'EA',
+        scope:{
+            
+        },
+        replace:true,
+        templateUrl:'./assets/html/about.html',
+        controller:['$scope','db',function($scope,db){
+            
+        }]
+    }
+}]);
 app.directive('customDirective',[function(){
     return {
         restrict:'EA',
