@@ -6,12 +6,11 @@ app.directive('toDoInput',[function(){
         },
         replace:true,
         templateUrl:'./assets/html/toDoInput.html',
-        controller:['$scope','db',function($scope,db){
-
+        controller:['$scope','db','moment',function($scope,db,moment){
             $scope.addTask = function(data){
                 db.addData(data);
             }
-            
+            $scope.timeNowMoment = moment().format('h:mm:ss a');
         }]
     }
 }]);

@@ -1,9 +1,9 @@
 <div class=" bg-light">
     <div class="container" >
         <div class="input-group pt-5 pb-5">
-            <input class="form-control form-control-lg" type="text" placeholder="Task To Perform" id="taskinput" ng-model="task">
+            <input class="form-control form-control-lg" type="text" placeholder="Task To Perform" on-key-up="addTask(task)" ng-model="task">
             <div class="input-group-append">
-                <button type="button" class="btn btn-primary ml-1" ng-click="addTask(task)" >{{buttontext}}</button>
+                <button type="button" class="btn btn-primary ml-2" ng-click="addTask(task)" >{{buttontext}}</button>
             </div>
         </div>
     </div>

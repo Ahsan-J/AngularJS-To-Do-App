@@ -1,4 +1,3 @@
-Edit Item not working ng-repeat scope issue 
 htaccess not working 
-task requires timestamp
-order by time stamp
+Angular Resource Reading From JSON needs to be tested on Server
+Connect Angular to Express Server

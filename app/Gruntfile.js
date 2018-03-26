@@ -21,7 +21,10 @@ module.exports = function(grunt){
             js_dep:{
                 src:[
                     './node_modules/angular/angular.js',
+                    './node_modules/angular-resource/angular-resource.js',
                     './node_modules/@uirouter/angularjs/release/angular-ui-router.js',
+                    './node_modules/moment/moment.js',
+                    './node_modules/angular-moment/angular-moment.js',
                     // '/.node_modules/jquery/dist/jquery.slim.js',
                     './assets/js/jquery-3.2.1.slim.js',
                     './assets/js/popper.js',

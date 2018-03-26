@@ -21,10 +21,12 @@
     "@fortawesome/fontawesome-free-solid": "^5.0.8",
     "@uirouter/angularjs": "^1.0.15",
     "angular": "^1.6.9",
+    "angular-moment": "^1.2.0",
     "angular-resource": "^1.6.9",
     "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
+    "moment": "^2.21.0",
     "popper.js": "^1.14.1"
   }
 }
