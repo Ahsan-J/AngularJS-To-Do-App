@@ -17,7 +17,11 @@ app.factory('db',function(){
         },
         list:[],
         addData:function(data){
-            this.list.push(data);
+            var value = {
+                name:data,
+                editState:false
+            }
+            this.list.push(value);
         },
         getData:function(){
             return this.list;
@@ -26,7 +30,11 @@ app.factory('db',function(){
             this.list.splice(index,1);
         },
         editData:function(index,newData){
-            this.list.splice(index,1,newData);
+            var value = {
+                name:newData,
+                editState:false
+            }
+            this.list.splice(index,1,value);
         }
     }
 });

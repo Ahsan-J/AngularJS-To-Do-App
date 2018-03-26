@@ -5,18 +5,18 @@
         </div>
     </div>
     <ul class="list-group">
-        <li class="list-group-item" ng-repeat="task in tasks | filter:search track by $index " ng-init="editTask=false">
-            <div class="row" ng-if="editTask==false">
-                <h4 class="col-sm-9 pt-1">{{task}}</h4>
+        <li class="list-group-item" ng-repeat="task in tasks | filter:search track by $index " >
+            <div class="row" ng-if="!task.editState">
+                <h4 class="col-sm-9 pt-1">{{task.name}}</h4>
                 <div class="col-sm-3">
-                    <button class="btn btn-outline-info" ng-click="console.log('clicked')">Edit Item</button>
+                    <button class="btn btn-outline-info" ng-click="task.editState = taskManager.changeEditState(task.editState)">Edit Item</button>
                     <button class="btn btn-outline-danger" ng-click = "taskManager.delete($index)">Delete Item</button>
                 </div>
             </div>
-            <div class="row" ng-if="editTask==true">
-                <input class="form-control-lg col-sm-10" type="text" placeholder="task">
+            <div class="row" ng-if="task.editState">
+                <input class="form-control-lg col-sm-10" type="text" placeholder="{{task.name}}" ng-model="newTask">
                 <div class="col-sm-2">
-                    <button class="btn btn-outline-info" ng-click="taskManager.edit($index);editTask=false">Save Item</button>
+                    <button class="btn btn-outline-info" ng-click="taskManager.edit($index,newTask);task.editState = taskManager.changeEditState(task.editState)">Save Item</button>
                 </div>
             </div>
         </li>
